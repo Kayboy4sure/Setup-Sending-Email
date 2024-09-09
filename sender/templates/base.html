@@ -1,0 +1,47 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-space-dynamic.css' %}">
+    <title>Document</title>
+</head>
+<body>
+  <header class="header-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="/" class="logo">
+              <h4>Spac<span>Dyna</span></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+                  
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div style="margin: 4cm auto;">
+    {% for message in messages %}  
+    <div class="alert alert-{{message.tags}}" role="alert" style="margin-top: 30px">
+      <h5>{{message}}</h5>
+    </div>
+    {% endfor %}
+    
+    {% block content %}
+      
+    {% endblock content %}
+  </div>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

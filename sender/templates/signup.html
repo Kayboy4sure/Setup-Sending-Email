@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+    <form action="" method='POST'>
+        {% csrf_token %}
+        <h3><strong>SIGN-UP</strong></h3>
+        <div class="mb-3">
+        {% for field in form  %}
+        <div class="mb-3">
+            <label>{{field.label}}</label>
+            {{field}}
+            <small>{{field.errors}}</small>
+        </div>
+        {% endfor %}
+          <button class="btn btn-primary" style="width:100%">Register</button>
+          <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </form>
+{% endblock content %}
+    

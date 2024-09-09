@@ -1,0 +1,22 @@
+form {
+    width: 500px;
+    height: auto;
+    padding: 20px 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+form p {
+    text-align: center;
+}
+form small {
+    color: red;
+    size: 12px;
+}
+form h3 {
+    text-align: center
+}
+form li {
+    list-style: none;
+    margin: auto;
+}
